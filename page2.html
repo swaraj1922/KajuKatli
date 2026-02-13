@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>For Kaju ❤️</title>
+  <title>For You 💖</title>
 
   <style>
     body {
@@ -17,44 +17,47 @@
 
     .content {
       text-align: center;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 40px 28px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(255,255,255,0.3);
       max-width: 320px;
+      color: white;
     }
 
     h1 {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.5;
     }
 
     a {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 12px;
       text-decoration: none;
-      color: #ff4b5c;
-      font-weight: bold;
+      color: white;
+      background: #ff6b81;
+      padding: 10px 18px;
+      border-radius: 25px;
+      font-size: 14px;
     }
 
-    /* Floating heart style */
+    /* small floating hearts */
     .heart {
       position: fixed;
       bottom: -20px;
-      font-size: 20px;
-      animation: floatUp 5s linear infinite;
-      color: red;
+      font-size: 18px;
+      animation: floatUp 6s linear infinite;
       opacity: 0.8;
     }
 
     @keyframes floatUp {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-100vh) scale(1.5);
-        opacity: 0;
-      }
+      from { transform: translateY(0); }
+      to { transform: translateY(-110vh); opacity: 0; }
     }
   </style>
 </head>
@@ -65,22 +68,17 @@
     <h1>Kaju ❤️</h1>
 
     <p>
-      You are not just important to me…<br>
-      You are my comfort, my smile, and my happiness.<br>
-      Having you in my life means everything 💖
+      You are not just important to me…  
+      you are my comfort, my smile, and my happiness. 💕
     </p>
 
     <a href="index.html">⬅ Back</a>
-    <br>
     <a href="page3.html">Next ➝</a>
   </div>
 
-  <!-- Floating hearts -->
-  <div class="heart" style="left:10%;">❤️</div>
-  <div class="heart" style="left:30%; animation-delay:1s;">❤️</div>
-  <div class="heart" style="left:50%; animation-delay:2s;">❤️</div>
-  <div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
-  <div class="heart" style="left:90%; animation-delay:4s;">❤️</div>
+  <div class="heart" style="left:15%;">❤️</div>
+  <div class="heart" style="left:40%; animation-delay:2s;">💖</div>
+  <div class="heart" style="left:70%; animation-delay:4s;">💕</div>
 
 </body>
 </html>
