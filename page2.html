@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;   /* center horizontally */
-    align-items: center;       /* center vertically */
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* new background */
-    font-family: Arial, sans-serif;
-  }
+  <title>For Kaju ❤️</title>
 
-  .content {
-    text-align: center;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  }
-</style>
-  .heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 20px;
-  animation: floatUp 5s linear infinite;
-  color: red;
-  opacity: 0.8;
-}
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
 
-@keyframes floatUp {
-  0% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) scale(1.5);
-    opacity: 0;
-  }
-}
-  <title>For Kaju</title>
+    .content {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      max-width: 320px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #ff4b5c;
+      font-weight: bold;
+    }
+
+    /* Floating heart style */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 5s linear infinite;
+      color: red;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
   <div class="content">
     <h1>Kaju ❤️</h1>
 
     <p>
-      You are not just important to me…  
-      you are my comfort, my smile, and my happiness.  
+      You are not just important to me…<br>
+      You are my comfort, my smile, and my happiness.<br>
       Having you in my life means everything 💖
     </p>
 
-    <a href="index.html">Back</a>
+    <a href="index.html">⬅ Back</a>
     <br>
-    <a href="page3.html">Next</a>
+    <a href="page3.html">Next ➝</a>
   </div>
-<div class="heart" style="left:10%;">❤️</div>
-<div class="heart" style="left:30%; animation-delay:1s;">❤️</div>
-<div class="heart" style="left:50%; animation-delay:2s;">❤️</div>
-<div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
-<div class="heart" style="left:90%; animation-delay:4s;">❤️</div>
+
+  <!-- Floating hearts -->
+  <div class="heart" style="left:10%;">❤️</div>
+  <div class="heart" style="left:30%; animation-delay:1s;">❤️</div>
+  <div class="heart" style="left:50%; animation-delay:2s;">❤️</div>
+  <div class="heart" style="left:70%; animation-delay:3s;">❤️</div>
+  <div class="heart" style="left:90%; animation-delay:4s;">❤️</div>
+
 </body>
 </html>
