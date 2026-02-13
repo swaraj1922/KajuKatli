@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Final Surprise ❤️</title>
+  <title>Forever Us ❤️</title>
 
   <style>
     body {
@@ -10,38 +10,51 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff758f, #ff7eb3);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
       font-family: Arial, sans-serif;
       overflow: hidden;
       color: white;
     }
 
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     .content {
       text-align: center;
-      padding: 40px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-      max-width: 350px;
+      padding: 45px;
+      border-radius: 25px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 0 35px rgba(255, 255, 255, 0.25);
+      max-width: 360px;
     }
 
-    /* Glowing title */
     h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 20px;
-      color: #ffccd5;
-      text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d, 0 0 30px #ff4d6d;
+      color: #ffd6e0;
+      text-shadow: 0 0 12px #ff4d6d, 0 0 25px #ff4d6d, 0 0 40px #ff4d6d;
+      animation: glow 2s ease-in-out infinite alternate;
     }
 
-    /* Typing animation */
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff4d6d; }
+      to { text-shadow: 0 0 25px #ff99ac, 0 0 40px #ff4d6d; }
+    }
+
+    /* Typing message */
     .typing {
       border-right: 3px solid white;
       white-space: nowrap;
       overflow: hidden;
       width: 0;
-      margin: 0 auto 20px;
-      animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+      margin: 0 auto 25px;
+      animation: typing 5s steps(45, end) forwards, blink 0.8s infinite;
       font-size: 18px;
     }
 
@@ -54,23 +67,23 @@
       50% { border-color: transparent; }
     }
 
-    /* Heart button */
+    /* Proposal button */
     .love-btn {
-      margin-top: 20px;
-      padding: 12px 25px;
+      margin-top: 15px;
+      padding: 14px 28px;
       font-size: 18px;
       border: none;
-      border-radius: 30px;
-      background: #ff4d6d;
+      border-radius: 40px;
+      background: linear-gradient(45deg, #ff4d6d, #ff99ac);
       color: white;
       cursor: pointer;
-      box-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d;
-      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px #ff4d6d, 0 0 30px #ff758f;
+      transition: 0.3s;
     }
 
     .love-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #ff758f, 0 0 40px #ff758f;
+      transform: scale(1.12);
+      box-shadow: 0 0 25px #ff99ac, 0 0 50px #ff4d6d;
     }
 
     /* Floating hearts */
@@ -78,24 +91,37 @@
       position: fixed;
       bottom: -20px;
       font-size: 22px;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.8;
+      animation: floatUp 7s linear infinite;
+      opacity: 0.85;
     }
 
     @keyframes floatUp {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh) scale(1.6);
-        opacity: 0;
-      }
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-110vh) scale(1.7); opacity: 0; }
+    }
+
+    /* Falling rose petals */
+    .petal {
+      position: fixed;
+      top: -20px;
+      font-size: 18px;
+      animation: fall 8s linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Romantic background music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_c8c8a73467.mp3" type="audio/mpeg">
+  </audio>
 
   <div class="content">
     <h1>I Love You ❤️</h1>
@@ -110,15 +136,22 @@
   </div>
 
   <!-- Floating hearts -->
-  <div class="heart" style="left:10%;">❤️</div>
-  <div class="heart" style="left:25%; animation-delay:1s;">💖</div>
-  <div class="heart" style="left:40%; animation-delay:2s;">💕</div>
-  <div class="heart" style="left:60%; animation-delay:3s;">💗</div>
-  <div class="heart" style="left:80%; animation-delay:4s;">💘</div>
+  <div class="heart" style="left:8%;">❤️</div>
+  <div class="heart" style="left:22%; animation-delay:1s;">💖</div>
+  <div class="heart" style="left:38%; animation-delay:2s;">💕</div>
+  <div class="heart" style="left:55%; animation-delay:3s;">💗</div>
+  <div class="heart" style="left:72%; animation-delay:4s;">💘</div>
+  <div class="heart" style="left:88%; animation-delay:5s;">❤️</div>
+
+  <!-- Falling rose petals -->
+  <div class="petal" style="left:15%;">🌹</div>
+  <div class="petal" style="left:35%; animation-delay:2s;">🌹</div>
+  <div class="petal" style="left:60%; animation-delay:4s;">🌹</div>
+  <div class="petal" style="left:80%; animation-delay:1s;">🌹</div>
 
   <script>
     function showMessage() {
-      alert("Yayyy! This is the best moment of my life ❤️✨");
+      alert("You just made my world complete ❤️✨ Forever yours!");
     }
   </script>
 
