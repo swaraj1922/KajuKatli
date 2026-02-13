@@ -1,84 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>For You 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaju ❤️</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: Arial, sans-serif;
+
+      /* soft cute gradient (less powerful than page3) */
+      background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
       overflow: hidden;
     }
 
-    .content {
+    /* CENTER CARD — now clearly visible */
+    .card {
       text-align: center;
-      padding: 40px 28px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.25);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 25px rgba(255,255,255,0.3);
+      padding: 36px 26px;
+      border-radius: 24px;
+
+      /* stronger background for readability */
+      background: rgba(255, 255, 255, 0.85);
+
+      /* soft cute shadow */
+      box-shadow: 0 10px 30px rgba(255, 105, 135, 0.35);
+
       max-width: 320px;
-      color: white;
+      width: 90%;
+      color: #ff4d6d;
     }
 
     h1 {
-      margin-bottom: 12px;
+      margin-top: 0;
+      font-size: 26px;
+      margin-bottom: 14px;
     }
 
     p {
-      font-size: 17px;
-      line-height: 1.5;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 24px;
     }
 
-    a {
+    /* BUTTONS */
+    .btn {
       display: inline-block;
-      margin-top: 12px;
-      text-decoration: none;
-      color: white;
-      background: #ff6b81;
       padding: 10px 18px;
-      border-radius: 25px;
+      margin: 6px;
+      border-radius: 22px;
+      background: #ff6b81;
+      color: white;
+      text-decoration: none;
       font-size: 14px;
+      box-shadow: 0 4px 14px rgba(255, 107, 129, 0.5);
+      transition: transform 0.2s ease;
     }
 
-    /* small floating hearts */
-    .heart {
+    .btn:active {
+      transform: scale(0.95);
+    }
+
+    /* FLOATING DECORATIONS */
+    .float {
       position: fixed;
       bottom: -20px;
-      font-size: 18px;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.8;
+      font-size: 20px;
+      animation: floatUp linear infinite;
+      opacity: 0.9;
     }
 
     @keyframes floatUp {
       from { transform: translateY(0); }
-      to { transform: translateY(-110vh); opacity: 0; }
+      to {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="content">
+  <div class="card">
     <h1>Kaju ❤️</h1>
 
     <p>
-      You are not just important to me…  
-      you are my comfort, my smile, and my happiness. 💕
+      You are not just important to me…<br>
+      you are my comfort, my smile,<br>
+      and my happiness. 💞
     </p>
 
-    <a href="index.html">⬅ Back</a>
-    <a href="page3.html">Next ➝</a>
+    <a class="btn" href="index.html">← Back</a>
+    <a class="btn" href="page3.html">Next →</a>
   </div>
 
-  <div class="heart" style="left:15%;">❤️</div>
-  <div class="heart" style="left:40%; animation-delay:2s;">💖</div>
-  <div class="heart" style="left:70%; animation-delay:4s;">💕</div>
+  <!-- Cute floating items -->
+  <div class="float" style="left:10%; animation-duration:7s;">❤️</div>
+  <div class="float" style="left:25%; animation-duration:9s;">🌸</div>
+  <div class="float" style="left:40%; animation-duration:8s;">🧸</div>
+  <div class="float" style="left:55%; animation-duration:6s;">🍫</div>
+  <div class="float" style="left:70%; animation-duration:10s;">💖</div>
+  <div class="float" style="left:85%; animation-duration:7.5s;">🌹</div>
 
 </body>
 </html>
