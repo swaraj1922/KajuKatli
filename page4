@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>She Said YES ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      text-align: center;
+      color: white;
+
+      /* romantic gradient */
+      background: linear-gradient(135deg, #ff6a88, #a18cd1);
+    }
+
+    /* CENTER CARD */
+    .card {
+      background: rgba(255, 255, 255, 0.18);
+      padding: 45px 28px;
+      border-radius: 30px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 0 50px rgba(255, 120, 160, 0.7);
+      width: 90%;
+      max-width: 330px;
+
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 32px;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 18px 0 28px;
+      line-height: 1.6;
+    }
+
+    /* YES BUTTON */
+    .yes-btn {
+      padding: 14px 28px;
+      border-radius: 30px;
+      border: none;
+      font-size: 17px;
+      background: linear-gradient(45deg, #ff5e7e, #ff9966);
+      color: white;
+      cursor: pointer;
+
+      box-shadow: 0 8px 25px rgba(255, 80, 120, 0.7);
+      transition: transform 0.2s ease;
+    }
+
+    .yes-btn:active {
+      transform: scale(0.93);
+    }
+
+    /* FLOATING HEARTS */
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      font-size: 18px;
+      animation: floatUp linear infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); }
+      to {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+
+    /* FIREWORK CONFETTI */
+    .confetti {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      background: white;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      border-radius: 50%;
+      animation: explode 1.2s ease forwards;
+    }
+
+    @keyframes explode {
+      to {
+        transform: translate(var(--x), var(--y));
+        opacity: 1;
+      }
+    }
+
+    /* TEXT GLOW */
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff9a9e; }
+      to { text-shadow: 0 0 25px #ffffff; }
+    }
+
+    /* FADE IN */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card" id="card">
+    <h1>Will You Be Mine Forever? 💍</h1>
+
+    <p>
+      From today… to tomorrow…  
+      and for all the beautiful years ahead,  
+      I want **only you** beside me ❤️
+    </p>
+
+    <button class="yes-btn" onclick="sayYes()">YES ❤️</button>
+  </div>
+
+  <!-- floating hearts -->
+  <div class="heart" style="left:10%; animation-duration:6s;">❤️</div>
+  <div class="heart" style="left:25%; animation-duration:8s;">💖</div>
+  <div class="heart" style="left:40%; animation-duration:7s;">💕</div>
+  <div class="heart" style="left:60%; animation-duration:9s;">💗</div>
+  <div class="heart" style="left:80%; animation-duration:6.5s;">💘</div>
+
+  <!-- romantic music -->
+  <audio id="music" src="https://cdn.pixabay.com/audio/2022/03/15/audio_115b9bce0b.mp3"></audio>
+
+  <script>
+    function sayYes() {
+      const card = document.getElementById("card");
+      const music = document.getElementById("music");
+
+      /* change text */
+      card.innerHTML = `
+        <h1>She Said YES ❤️</h1>
+        <p>
+          This is the beginning of our  
+          **forever love story** ✨  
+          I love you endlessly 💖
+        </p>
+      `;
+
+      /* play music */
+      music.play();
+
+      /* create confetti burst */
+      for (let i = 0; i < 40; i++) {
+        const c = document.createElement("div");
+        c.className = "confetti";
+
+        const angle = Math.random() * 2 * Math.PI;
+        const radius = 150 + Math.random() * 120;
+
+        c.style.setProperty("--x", Math.cos(angle) * radius + "px");
+        c.style.setProperty("--y", Math.sin(angle) * radius + "px");
+
+        document.body.appendChild(c);
+
+        setTimeout(() => c.remove(), 1200);
+      }
+    }
+  </script>
+
+</body>
+</html>
